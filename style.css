@@ -1,0 +1,68 @@
+body {
+  background-color: black;
+}
+
+#board {
+  margin: 0 auto;
+  width: 500px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+/* style the cells */
+td {
+  /* set fixed width and height for cells, including border */
+  width: 150px;
+  height: 150px;
+  /* include border in width and height of cells */
+  box-sizing: border-box;
+  /* thicken the grid */
+  border: 10px solid white;
+  text-align: center;
+  /* set font of 'X' and 'O' to a modern font */
+  font-family: "Roboto", sans-serif;
+  font-size: 96px; /* reduce the font size */
+  font-weight: bold;
+  /* set color of 'X' to white and 'O' to white */
+  color: white;
+  /* set cell background to black */
+  background-color: black;
+}
+
+#message {
+  /* center the text under the grid */
+  text-align: center;
+  /* increase the font size */
+  font-size: 36px;
+  /* use a modern font */
+  font-family: "Roboto", sans-serif;
+  /* make the font bold and orange */
+  font-weight: bold;
+  color: orange;
+  /* add some top padding to the element */
+  padding-top: 66px;
+}
+
+/* set color of 'O' to white */
+td[data-player="O"] {
+  color: white;
+}
+
+td.win {
+  /* add an orange background color to winning cells */
+  background-color: orange;
+
+  /* add a glowing effect to winning cells */
+  box-shadow: 0 0 20px 10px orange;
+}

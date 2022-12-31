@@ -34,7 +34,7 @@ td {
   font-family: "Roboto", sans-serif;
   font-size: 96px; /* reduce the font size */
   font-weight: bold;
-  /* set color of 'X' to white and 'O' to white */
+  /* set color of 'X' and 'O' to white */
   color: white;
   /* set cell background to black */
   background-color: black;
@@ -50,8 +50,8 @@ td {
   /* make the font bold and orange */
   font-weight: bold;
   color: orange;
-  /* add some top padding to the element */
-  padding-top: 66px;
+  /* add 50px padding to the bottom of the element */
+  padding-bottom: 50px;
 }
 
 /* set color of 'O' to white */
@@ -65,4 +65,33 @@ td.win {
 
   /* add a glowing effect to winning cells */
   box-shadow: 0 0 20px 10px orange;
+}
+
+#settings {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  background-color: white;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  transform: translateX(100%);
+  transition: transform 0.5s ease-out;
+}
+
+#settings.open {
+  transform: translateX(0);
+}
+
+#settings h3 {
+  margin: 0;
+  padding: 10px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+#color-picker {
+  display: block;
+  margin: 10px;
 }
